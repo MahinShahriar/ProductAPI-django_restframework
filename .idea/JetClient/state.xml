@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="auth">
+          <authState>
+            <option name="basic">
+              <basicAuthState>
+                <option name="pass" value="test-password" />
+                <option name="username" value="test-user" />
+              </basicAuthState>
+            </option>
+            <option name="bearer">
+              <pw>
+                <option name="token" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4MTU1NzQ4LCJpYXQiOjE3MzgxNTU0NDgsImp0aSI6IjNmZjM2ODJjZjNhODQ0MmJiZjI5NmRlN2U5MTg5NTY1IiwidXNlcl9pZCI6NH0.DozvkMlnytfna2Hg0bUVHtuZh9ZiuZA_7hnd_RK4w7o" />
+              </pw>
+            </option>
+            <option name="type" value="BEARER" />
+          </authState>
+        </option>
+        <option name="preRequestScript" value="http://127.0.0.1:8000/product/list" />
+      </draftsState>
+    </option>
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="auth">
+            <authState>
+              <option name="bearer">
+                <pw>
+                  <option name="token" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4MTU1NzQ4LCJpYXQiOjE3MzgxNTU0NDgsImp0aSI6IjNmZjM2ODJjZjNhODQ0MmJiZjI5NmRlN2U5MTg5NTY1IiwidXNlcl9pZCI6NH0.DozvkMlnytfna2Hg0bUVHtuZh9ZiuZA_7hnd_RK4w7o" />
+                </pw>
+              </option>
+              <option name="type" value="BEARER" />
+            </authState>
+          </option>
+          <option name="environmentGroups">
+            <list>
+              <environmentGroupState>
+                <option name="name" value="Default" />
+              </environmentGroupState>
+            </list>
+          </option>
+          <option name="id" value="94d9e7ba-1502-4e0d-a661-165c74c003a7" />
+          <option name="name" value="New Project" />
+          <option name="selectedEnvironmentIds">
+            <map>
+              <entry key="default" />
+            </map>
+          </option>
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="autoSync" value="true" />
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="3afca1f3-c5b3-4a5c-96d8-bd7f98e363ea" />
+    <option name="version" value="6" />
+  </component>
+</project>
