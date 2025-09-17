@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from django.core.cache import cache
 from .models import Product
 from .serializer import ProductSerializer, SellerSerializer, SellerRegistrationSerializer, SellerLoginSerializer
 
@@ -27,16 +28,27 @@ def product_overview(request):
 # PRODUCT LIST
 @api_view(['GET'])
 def product_list(request):
-    product = Product.objects.all()
+    product = cache.get('all_products')
+    if not product:
+        print('From Database !')
+        product = Product.objects.all()
+        cache.set('all_products', product, timeout=60*15)
+    elif product:
+        print("cache found ! ")
     serialized = ProductSerializer(product, many=True)
-
     return Response(serialized.data)
 
 
 # DETAIL OF SPECIFIC PRODUCT
 @api_view(['GET'])
 def product_detail(request, pk):
-    product = Product.objects.get(pk=pk)
+    product = cache.get(f"product_{pk}")
+    if not product:
+        print('From Database !')
+        product = Product.objects.get(pk=pk)
+        cache.set(f'product_{pk}', product, timeout=60*15)
+    elif product:
+        print("cache found ! ")
     serialized = ProductSerializer(product, many=False)
 
     return Response(serialized.data)
