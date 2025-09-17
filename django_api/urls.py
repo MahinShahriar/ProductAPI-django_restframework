@@ -19,7 +19,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('product/', include(product_urls)),
-    path('/signup', SellerRegistrationView.as_view(), name='signup'),
+    path('signup', SellerRegistrationView.as_view(), name='signup'),
     path('login', LoginView.as_view(), name='login'),
     path('dashboard', SellerDashboardView.as_view(), name='dashboard'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
